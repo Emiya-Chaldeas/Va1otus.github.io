@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#4aa3d9"/><stop offset="1" stop-color="#6bd3c9"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="#07111a"/>
+  <g transform="translate(40,40)" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.9">
+    <path d="M0 120 C120 10, 320 230, 480 110" stroke-linecap="round"/>
+    <path d="M20 260 C180 130, 380 380, 560 240" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <g transform="translate(480,80)" fill="#dff8ff" font-family="Arial" font-size="24">
+    <text x="0" y="0" dy="0">Placebo</text>
+    <text x="0" y="36" fill="#9aa9b3" font-size="14">信念 • 期待 • 躯体反应</text>
+  </g>
+  <g transform="translate(80,320)" fill="#eaf7ff" font-family="Arial" font-size="14">
+    <rect x="0" y="0" width="420" height="120" rx="12" fill="rgba(255,255,255,0.03)"/>
+    <text x="18" y="26">示例：双盲对照试验中，接受假药的对照组出现症状缓解。</text>
+  </g>
+</svg>
