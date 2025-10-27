@@ -157,6 +157,43 @@
         font-size: 14px;
       }
     </style>
+    /* 响应式适配：手机屏幕（宽度 ≤ 768px） */ @media (max-width: 768px) { /* 1.
+    导航栏适配：垂直排列 */ .nav-container { width: 100%; padding: 0 20px;
+    flex-direction: column; gap: 15px; } .nav-list { flex-direction: column;
+    gap: 10px; } .nav-item { margin-left: 0; text-align: center; } /* 2. Banner
+    区域适配：缩小高度+字体 */ .banner { height: 350px; } .banner-title {
+    font-size: 28px; } .banner-subtitle { font-size: 16px; } .banner-btn {
+    padding: 10px 20px; font-size: 14px; margin: 0 5px 10px; } /* 3.
+    通用容器适配：100%宽度+内边距 */ .intro-container, .points-container,
+    .mechanism-container, .cases-container, .scenes-container,
+    .empowerment-container, .sides-container, .rational-container,
+    .team-container, .project-container, .contact-container, .summary-container
+    { width: 100%; padding: 0 20px; } /* 4. 两栏/三栏布局适配：垂直排列 */
+    .intro-container, .point-card, .mechanism-card, .case-body, .teacher-cards,
+    .youth-cards, .side-cards, .contact-methods, .team-members { flex-direction:
+    column; gap: 20px; } /* 5. 图片适配：100%宽度+自动高度 */ .intro-img,
+    .point-img, .mechanism-img, .case-img, .scene-img, .teacher-card-img,
+    .rational-img, .member-img, .project-img { width: 100%; height: auto;
+    max-width: 400px; margin: 0 auto; } /* 6. 文字适配：缩小字体 */
+    .intro-title, .point-title, .mechanism-title, .case-header, .scene-title,
+    .empowerment-h2, .side-title, .rational-title, .team-title, .project-title,
+    .contact-title, .summary-h2 { font-size: 22px; } .intro-desc, .point-desc,
+    .mechanism-desc, .case-desc, .scene-desc, .teacher-card-desc,
+    .youth-card-desc, .side-card-desc, .rational-content, .project-content,
+    .member-desc, .comment-content { font-size: 15px; line-height: 1.6; } /* 7.
+    生活应用页网格布局适配：1列 */ .scenes-container { grid-template-columns:
+    1fr; } /* 8. 互动区域适配：缩小输入框宽度 */ .interaction-textarea { width:
+    100%; max-width: 600px; } /* 9. 底部适配：缩小字体 */ .footer-copyright,
+    .footer-link { font-size: 12px; } } /* 响应式适配：平板屏幕（768px < 宽度 ≤
+    1024px） */ @media (min-width: 769px) and (max-width: 1024px) { /*
+    容器宽度适配：90%宽度 */ .nav-container, .intro-container,
+    .points-container, .mechanism-container, .cases-container,
+    .scenes-container, .empowerment-container, .sides-container,
+    .rational-container, .team-container, .project-container, .contact-container
+    { width: 90%; } /* 两栏布局适配：保持横向+缩小间距 */ .teacher-cards,
+    .youth-cards, .side-cards { flex-wrap: wrap; justify-content: center; }
+    .teacher-card, .youth-card, .side-card { flex: 1 1 40%; min-width: 300px; }
+    }
   </head>
 
   <body>
