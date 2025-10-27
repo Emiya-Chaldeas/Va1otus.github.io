@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安慰剂效应概述</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+      /* 导航栏样式（同首页） */
+      .nav {
+        background-color: #2c3e50;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .nav-list {
+        display: flex;
+        list-style: none;
+      }
+      .nav-item {
+        margin-left: 30px;
+      }
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .nav-link:hover {
+        color: #3498db;
+      }
+      /* 标题栏样式 */
+      .title-bar {
+        background-color: #f9f9f9;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .title-main {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .title-sub {
+        font-size: 18px;
+        color: #777;
+      }
+      /* 核心要点样式 */
+      .key-points {
+        padding: 80px 0;
+      }
+      .points-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+      .point-card {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      .point-img {
+        width: 400px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .point-content {
+        flex: 1;
+      }
+      .point-title {
+        font-size: 24px;
+        color: #3498db;
+        margin-bottom: 15px;
+      }
+      .point-desc {
+        font-size: 17px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 10px;
+      }
+      /* 概念总结样式 */
+      .summary {
+        background-color: #3498db;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+      .summary-container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .summary-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .summary-formula {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 20px 0;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        display: inline-block;
+      }
+      /* 底部样式（同首页） */
+      .footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .footer-copyright {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+      .footer-link {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">安慰剂效应</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item">
+            <a href="overview.html" class="nav-link">效应概述</a>
+          </li>
+          <li class="nav-item">
+            <a href="mechanism.html" class="nav-link">作用机制</a>
+          </li>
+          <li class="nav-item">
+            <a href="cases.html" class="nav-link">经典案例</a>
+          </li>
+          <li class="nav-item">
+            <a href="life.html" class="nav-link">生活应用</a>
+          </li>
+          <li class="nav-item">
+            <a href="empowerment.html" class="nav-link">双向赋能</a>
+          </li>
+          <li class="nav-item">
+            <a href="risk.html" class="nav-link">争议风险</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">关于我们</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 标题栏 -->
+    <section class="title-bar">
+      <h1 class="title-main">安慰剂效应究竟是什么？</h1>
+      <p class="title-sub">拆解“安慰剂效应”的3个核心要点，明确概念边界</p>
+    </section>
+
+    <!-- 核心要点区域 -->
+    <section class="key-points">
+      <div class="points-container">
+        <!-- 要点1：安慰剂的本质 -->
+        <div class="point-card">
+          <img
+            src="https://img.freepik.com/free-photo/medical-pills-tablets_23-2149312042.jpg"
+            alt="安慰剂示例"
+            class="point-img"
+          />
+          <div class="point-content">
+            <h2 class="point-title">要点1：先搞懂“安慰剂”——无作用的“空壳子”</h2>
+            <p class="point-desc">
+              它的本质是“无特定药理作用的物质或操作”，比如淀粉做的“药片”、生理盐水注射剂、不包含有效成分的“药膏”，甚至是“假装进行的手术”（如“假支架手术”）。
+            </p>
+            <p class="point-desc">
+              这些东西本身对疾病没有任何直接治疗作用，就像“空壳子”一样，仅通过“使用者的信念”产生间接影响。
+            </p>
+          </div>
+        </div>
+
+        <!-- 要点2：心理预期前提 -->
+        <div class="point-card">
+          <div class="point-content">
+            <h2 class="point-title">要点2：关键前提——“相信有效”的心理预期</h2>
+            <p class="point-desc">
+              安慰剂效应的启动条件是：使用者必须相信“该物质/操作有效”。例如医生说“这是进口止痛药”，护士说“这针能退烧”，这种权威暗示会强化“有效”的信念。
+            </p>
+            <p class="point-desc">
+              反例：若提前知道是“假药”，效果会大幅下降——如同知道盲盒是空的，期待感消失，心理预期无法建立。
+            </p>
+          </div>
+          <img
+            src="https://img.freepik.com/free-photo/patient-trusting-doctor_23-2149312039.jpg"
+            alt="医患信任"
+            class="point-img"
+          />
+        </div>
+
+        <!-- 要点3：效果边界 -->
+        <div class="point-card">
+          <img
+            src="https://img.freepik.com/free-photo/medical-chart-symptoms_23-2149312041.jpg"
+            alt="症状与疾病"
+            class="point-img"
+          />
+          <div class="point-content">
+            <h2 class="point-title">
+              要点3：效果边界——改善“主观症状”，不治愈“疾病本身”
+            </h2>
+            <p class="point-desc">
+              <strong>有效场景</strong
+              >：疼痛减轻、焦虑缓解、睡眠变好、疲劳消失（均为“主观感受层面”，受心理状态影响较大）。
+            </p>
+            <p class="point-desc">
+              <strong>无效场景</strong
+              >：癌症患者用安慰剂，肿瘤不会缩小；高血压患者用安慰剂，血压不会降至正常（均为“疾病本质层面”，需科学治疗干预）。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 概念总结区域 -->
+    <section class="summary">
+      <div class="summary-container">
+        <h2 class="summary-title">概念总结</h2>
+        <p class="summary-desc">
+          安慰剂效应的核心是“信念驱动生理反应”，可用公式清晰表达：
+        </p>
+        <div class="summary-formula">
+          安慰剂效应 = 相信“有用”的心理 → 身体产生“有用”的反应
+        </div>
+        <p class="summary-desc">
+          它不是“心理作用的自我安慰”，而是有明确生理基础的科学现象。
+        </p>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <div class="footer-copyright">© 2024 安慰剂效应主题网站 版权所有</div>
+      <div>
+        <a href="#" class="footer-link">隐私政策</a>
+        <a href="#" class="footer-link">友情链接</a>
+        <a href="about.html" class="footer-link">联系我们</a>
+      </div>
+    </footer>
+  </body>
+</html>

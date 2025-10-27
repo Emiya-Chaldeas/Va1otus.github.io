@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安慰剂效应的作用机制</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+      /* 导航栏样式（同首页） */
+      .nav {
+        background-color: #2c3e50;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .nav-list {
+        display: flex;
+        list-style: none;
+      }
+      .nav-item {
+        margin-left: 30px;
+      }
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .nav-link:hover {
+        color: #3498db;
+      }
+      /* 标题栏样式（同概述页） */
+      .title-bar {
+        background-color: #f9f9f9;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .title-main {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .title-sub {
+        font-size: 18px;
+        color: #777;
+      }
+      /* 机制展示样式 */
+      .mechanism {
+        padding: 80px 0;
+        background-color: white;
+      }
+      .mechanism-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+      }
+      .mechanism-card {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+      .mechanism-img {
+        width: 450px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .mechanism-content {
+        flex: 1;
+      }
+      .mechanism-title {
+        font-size: 26px;
+        color: #e74c3c;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .mechanism-title::before {
+        content: "01";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: #e74c3c;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 15px;
+        font-size: 18px;
+      }
+      .mechanism-card:nth-child(2) .mechanism-title::before {
+        content: "02";
+      }
+      .mechanism-card:nth-child(3) .mechanism-title::before {
+        content: "03";
+      }
+      .mechanism-desc {
+        font-size: 17px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+      .mechanism-data {
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #e74c3c;
+        margin-top: 20px;
+      }
+      .mechanism-data p {
+        font-size: 16px;
+        color: #333;
+      }
+      /* 小总结样式 */
+      .small-summary {
+        background-color: #2c3e50;
+        color: white;
+        padding: 70px 0;
+      }
+      .summary-container {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .summary-h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+      .summary-p {
+        font-size: 18px;
+        line-height: 1.8;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      /* 底部样式（同首页） */
+      .footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .footer-copyright {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+      .footer-link {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">安慰剂效应</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item">
+            <a href="overview.html" class="nav-link">效应概述</a>
+          </li>
+          <li class="nav-item">
+            <a href="mechanism.html" class="nav-link">作用机制</a>
+          </li>
+          <li class="nav-item">
+            <a href="cases.html" class="nav-link">经典案例</a>
+          </li>
+          <li class="nav-item">
+            <a href="life.html" class="nav-link">生活应用</a>
+          </li>
+          <li class="nav-item">
+            <a href="empowerment.html" class="nav-link">双向赋能</a>
+          </li>
+          <li class="nav-item">
+            <a href="risk.html" class="nav-link">争议风险</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">关于我们</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 标题栏 -->
+    <section class="title-bar">
+      <h1 class="title-main">为啥“骗自己”真有用？</h1>
+      <p class="title-sub">剖析大脑调动“身体资源”的3个关键机制</p>
+    </section>
+
+    <!-- 机制展示区域 -->
+    <section class="mechanism">
+      <div class="mechanism-container">
+        <!-- 机制1：内啡肽的作用 -->
+        <div class="mechanism-card">
+          <img
+            src="https://img.freepik.com/free-photo/brain-neurons-synapses_23-2149312045.jpg"
+            alt="大脑内啡肽"
+            class="mechanism-img"
+          />
+          <div class="mechanism-content">
+            <h2 class="mechanism-title">
+              大脑会“伪造”天然“止痛药”——内啡肽的作用
+            </h2>
+            <p class="mechanism-desc">
+              原理：大脑中的“内啡肽”相当于“天然吗啡”，能直接阻断疼痛信号向大脑皮层的传递，从根源减轻痛感。
+            </p>
+            <p class="mechanism-desc">
+              过程：当人相信“使用了有效药物”时，大脑会接收“积极治疗信号”，主动分泌更多内啡肽，强化镇痛效果。
+            </p>
+            <div class="mechanism-data">
+              <p>
+                <strong>案例呼应</strong
+                >：张先生吃淀粉片后，大脑分泌内啡肽量增加2-3倍，成功阻断太阳穴疼痛神经通路，缓解了慢性头痛。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 机制2：HPA轴的激活 -->
+        <div class="mechanism-card">
+          <div class="mechanism-content">
+            <h2 class="mechanism-title">大脑能调节“炎症开关”——HPA轴的激活</h2>
+            <p class="mechanism-desc">
+              原理：大脑中的“下丘脑-垂体-肾上腺轴（HPA轴）”是人体的“炎症控制器”，激活后会促使肾上腺分泌“皮质醇”——一种能有效抑制炎症反应的激素。
+            </p>
+            <p class="mechanism-desc">
+              过程：患者相信“使用了抗炎药”时，HPA轴会被“欺骗性激活”，皮质醇分泌量上升，进而抑制体内炎症因子的活性。
+            </p>
+            <div class="mechanism-data">
+              <p>
+                <strong>数据支撑</strong
+                >：类风湿关节炎患者用安慰剂后，皮质醇浓度上升15%-20%，炎症因子（TNF-α、IL-6）减少，关节肿胀、疼痛等症状明显缓解。
+              </p>
+            </div>
+          </div>
+          <img
+            src="https://img.freepik.com/free-photo/hormone-regulation-diagram_23-2149312044.jpg"
+            alt="HPA轴"
+            class="mechanism-img"
+          />
+        </div>
+
+        <!-- 机制3：自主神经调节 -->
+        <div class="mechanism-card">
+          <img
+            src="https://img.freepik.com/free-photo/heart-rate-monitor_23-2149312043.jpg"
+            alt="自主神经"
+            class="mechanism-img"
+          />
+          <div class="mechanism-content">
+            <h2 class="mechanism-title">大脑会“修正”自主神经的“紊乱”</h2>
+            <p class="mechanism-desc">
+              原理：自主神经负责控制心跳、呼吸、消化等“无意识生理活动”，焦虑、失眠时会出现紊乱（如交感神经兴奋→心跳加快、难以入睡）。
+            </p>
+            <p class="mechanism-desc">
+              过程：安慰剂带来的“安全感”会让大脑主动调节自主神经——抑制过度兴奋的交感神经，激活促进放松的副交感神经，恢复生理节律。
+            </p>
+            <div class="mechanism-data">
+              <p>
+                <strong>数据案例</strong
+                >：失眠者喝“温水助眠药”后，心跳从80次/分钟降至65次/分钟，呼吸从18次/分钟降至12次/分钟，顺利进入“入睡状态”。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小总结区域 -->
+    <section class="small-summary">
+      <div class="summary-container">
+        <h2 class="summary-h2">小总结</h2>
+        <p class="summary-p">
+          说到底，安慰剂效应不是“心理作用的骗局”，而是大脑向我们展示的“强大潜力”：它能通过“相信”这个简单的动作，调动内啡肽、皮质醇等身体“自带资源”，帮我们对抗疼痛、炎症和不适。这也让我们明白：身体和心理从来不是分开的，你对身体的“信任”，其实就是最好的“健康助力”之一。
+        </p>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <div class="footer-copyright">© 2024 安慰剂效应主题网站 版权所有</div>
+      <div>
+        <a href="#" class="footer-link">隐私政策</a>
+        <a href="#" class="footer-link">友情链接</a>
+        <a href="about.html" class="footer-link">联系我们</a>
+      </div>
+    </footer>
+  </body>
+</html>

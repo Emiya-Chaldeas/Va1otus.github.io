@@ -1,83 +1,242 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>安慰剂效应</title>
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<div class="bg-lines"></div>
-<header class="site-header">
-  <div class="container">
-    <div class="brand">
-      <div class="logo">RΛ</div>
-      <div class="titles">
-        <h1>安慰剂效应</h1>
-        <p class="subtitle">安慰剂效应 | made by Va1otus</p>
-      </div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>神奇的“假治疗”——安慰剂效应</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+
+      /* 导航栏样式 */
+      .nav {
+        background-color: #2c3e50;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .nav-list {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-item {
+        margin-left: 30px;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #3498db;
+      }
+
+      /* Banner 样式 */
+      .banner {
+        height: 500px;
+        background: url("https://img.freepik.com/free-photo/warm-medical-background-with-hand-holding-heart_23-2149312038.jpg")
+          center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: overlay;
+      }
+
+      .banner-content {
+        max-width: 800px;
+        padding: 0 20px;
+      }
+
+      .banner-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .banner-subtitle {
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+
+      .banner-btn {
+        padding: 12px 30px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .banner-btn:hover {
+        background-color: #2980b9;
+      }
+
+      /* 简介区域样式 */
+      .intro {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+
+      .intro-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .intro-img {
+        width: 500px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .intro-text {
+        flex: 1;
+      }
+
+      .intro-title {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      .intro-desc {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      /* 底部样式 */
+      .footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer-copyright {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .footer-link {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 导航栏 -->
     <nav class="nav">
-      <a href="#intro">简介</a>
-      <a href="#cases">经典研究</a>
-      <a href="#meaning">现实意义</a>
-      <a href="#refs">参考</a>
-    </nav>
-    <button id="menuBtn" class="menu-btn" aria-label="菜单">☰</button>
-  </div>
-</header>
-
-<main>
-  <section class="hero container">
-    <div class="hero-left">
-      <h2>当信念带来真实改变</h2>
-      <p>安慰剂效应（Placebo Effect）说明了心理预期如何影响生理反应。本页面以莱茵生命风格呈现——冷静、科技、理性的界面，便于科普与展示。</p>
-      <div class="cta-row">
-        <a class="btn" href="#intro">了解更多</a>
-        <a class="btn ghost" href="#cases">查看案例</a>
+      <div class="nav-container">
+        <div class="nav-logo">安慰剂效应</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item">
+            <a href="overview.html" class="nav-link">效应概述</a>
+          </li>
+          <li class="nav-item">
+            <a href="mechanism.html" class="nav-link">作用机制</a>
+          </li>
+          <li class="nav-item">
+            <a href="cases.html" class="nav-link">经典案例</a>
+          </li>
+          <li class="nav-item">
+            <a href="life.html" class="nav-link">生活应用</a>
+          </li>
+          <li class="nav-item">
+            <a href="empowerment.html" class="nav-link">双向赋能</a>
+          </li>
+          <li class="nav-item">
+            <a href="risk.html" class="nav-link">争议风险</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">关于我们</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="hero-right">
-      <img src="../placebo_illus.svg" alt="安慰剂示意" />
-    </div>
-  </section>
+    </nav>
 
-  <section id="intro" class="container card">
-    <h3>什么是安慰剂效应？</h3>
-    <p>安慰剂效应是一种当个体对治疗抱有积极预期时，即便所接受的是无药效的“假处理”，也可能在症状上获得缓解或改善的现象。该效应在疼痛管理、抑郁症、帕金森等领域的研究中有广泛观察。</p>
-  </section>
+    <!-- Banner 区域 -->
+    <section class="banner">
+      <div class="banner-content">
+        <h1 class="banner-title">神奇的“假治疗”——揭秘安慰剂效应</h1>
+        <p class="banner-subtitle">
+          探索信念如何触发身体的治愈力量，了解生活中无处不在的安慰剂效应
+        </p>
+        <button
+          class="banner-btn"
+          onclick="window.location.href='overview.html'"
+        >
+          立即探索
+        </button>
+        <button class="banner-btn" onclick="window.location.href='cases.html'">
+          查看案例
+        </button>
+      </div>
+    </section>
 
-  <section id="cases" class="container grid">
-    <div class="card">
-      <h4>经典临床试验</h4>
-      <p>在双盲随机对照试验中，对照组服用安慰剂时也出现改善，提示心理与期待对结果有显著影响。</p>
-    </div>
-    <div class="card">
-      <h4>神经学证据</h4>
-      <p>研究通过脑成像发现，安慰剂能够激活与奖励和疼痛调节相关的大脑回路。</p>
-    </div>
-  </section>
+    <!-- 简介区域 -->
+    <section class="intro">
+      <div class="intro-container">
+        <img
+          src="https://img.freepik.com/free-photo/doctor-giving-pill-patient_23-2149312040.jpg"
+          alt="安慰剂示例"
+          class="intro-img"
+        />
+        <div class="intro-text">
+          <h2 class="intro-title">什么是安慰剂效应？</h2>
+          <p class="intro-desc">
+            你知道吗？一颗不含任何药效的淀粉药片，却能缓解慢性头痛；一次没有实际操作的“手术”，竟能减轻心绞痛患者的痛苦。这就是神奇的安慰剂效应——它不是骗局，而是“相信”的心理预期，触发身体产生真实的治愈反应。从医学临床到日常生活，安慰剂效应无处不在，它让我们重新认识“身心协同”的强大力量。
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <section id="meaning" class="container card">
-    <h3>现实意义与伦理</h3>
-    <p>理解安慰剂效应有助于医学实践中的沟通策略，但在临床应用中需注意知情同意与伦理边界。</p>
-  </section>
-
-  <section id="refs" class="container card small">
-    <h4>参考与延伸阅读</h4>
-    <ul>
-      <li>Beecher HK. The powerful placebo. JAMA, 1955.</li>
-      <li>Colloca L, Benedetti F. The placebo effect: from the neurobiological paradigm to clinical practice. Nat Rev Neurosci.</li>
-    </ul>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 made by Va1otus · 科普页面，仅供学习与演示</p>
-  </div>
-</footer>
-
-<script src="../script.js"></script>
-</body>
+    <!-- 底部 -->
+    <footer class="footer">
+      <div class="footer-copyright">© 2024 安慰剂效应主题网站 版权所有</div>
+      <div>
+        <a href="#" class="footer-link">隐私政策</a>
+        <a href="#" class="footer-link">友情链接</a>
+        <a href="about.html" class="footer-link">联系我们</a>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关于我们 - 安慰剂效应主题网站</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+      /* 导航栏样式（同首页） */
+      .nav {
+        background-color: #2c3e50;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .nav-list {
+        display: flex;
+        list-style: none;
+      }
+      .nav-item {
+        margin-left: 30px;
+      }
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .nav-link:hover {
+        color: #3498db;
+      }
+      /* 标题栏样式（同概述页） */
+      .title-bar {
+        background-color: #f9f9f9;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .title-main {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .title-sub {
+        font-size: 18px;
+        color: #777;
+      }
+      /* 团队介绍样式 */
+      .team {
+        padding: 80px 0;
+        background-color: white;
+      }
+      .team-container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .team-title {
+        font-size: 30px;
+        color: #2c3e50;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+      }
+      .member-card {
+        width: 250px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      .member-card:hover {
+        transform: translateY(-5px);
+      }
+      .member-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .member-info {
+        padding: 20px;
+        text-align: center;
+      }
+      .member-name {
+        font-size: 20px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .member-role {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 15px;
+      }
+      .member-desc {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+      }
+      /* 项目背景样式 */
+      .project {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+      .project-container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .project-title {
+        font-size: 30px;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .project-content {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.8;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      /* 联系方式样式 */
+      .contact {
+        padding: 80px 0;
+        background-color: white;
+      }
+      .contact-container {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .contact-title {
+        font-size: 30px;
+        color: #2c3e50;
+        margin-bottom: 40px;
+      }
+      .contact-methods {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+      }
+      .contact-method {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .method-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #3498db;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 30px;
+      }
+      .method-name {
+        font-size: 18px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .method-info {
+        font-size: 16px;
+        color: #555;
+      }
+      /* 底部样式（同首页） */
+      .footer {
+        background-color: #2c3e50;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .footer-copyright {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+      .footer-link {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">安慰剂效应</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item">
+            <a href="overview.html" class="nav-link">效应概述</a>
+          </li>
+          <li class="nav-item">
+            <a href="mechanism.html" class="nav-link">作用机制</a>
+          </li>
+          <li class="nav-item">
+            <a href="cases.html" class="nav-link">经典案例</a>
+          </li>
+          <li class="nav-item">
+            <a href="life.html" class="nav-link">生活应用</a>
+          </li>
+          <li class="nav-item">
+            <a href="empowerment.html" class="nav-link">双向赋能</a>
+          </li>
+          <li class="nav-item">
+            <a href="risk.html" class="nav-link">争议风险</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">关于我们</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 标题栏 -->
+    <section class="title-bar">
+      <h1 class="title-main">关于我们</h1>
+      <p class="title-sub">了解网站背后的团队与初心</p>
+    </section>
+
+    <!-- 团队介绍区域 -->
+    <section class="team">
+      <div class="team-container">
+        <h2 class="team-title">我们的团队</h2>
+        <div class="team-members">
+          <!-- 成员1 -->
+          <div class="member-card">
+            <img
+              src="https://img.freepik.com/free-photo/person-avatar_23-2148816610.jpg"
+              alt="曾志成"
+              class="member-img"
+            />
+            <div class="member-info">
+              <h3 class="member-name">曾志成</h3>
+              <p class="member-role">汇报人</p>
+              <p class="member-desc">
+                负责项目整体策划与内容核心梳理，主导安慰剂效应的科学原理研究与案例筛选。
+              </p>
+            </div>
+          </div>
+
+          <!-- 成员2 -->
+          <div class="member-card">
+            <img
+              src="https://img.freepik.com/free-photo/person-avatar_23-2148816611.jpg"
+              alt="谢佳辰"
+              class="member-img"
+            />
+            <div class="member-info">
+              <h3 class="member-name">谢佳辰</h3>
+              <p class="member-role">PPT制作</p>
+              <p class="member-desc">
+                负责将核心内容转化为可视化PPT，设计信息架构与视觉呈现方案，确保内容易读性。
+              </p>
+            </div>
+          </div>
+
+          <!-- 成员3 -->
+          <div class="member-card">
+            <img
+              src="https://img.freepik.com/free-photo/person-avatar_23-2148816612.jpg"
+              alt="岑国雯"
+              class="member-img"
+            />
+            <div class="member-info">
+              <h3 class="member-name">岑国雯</h3>
+              <p class="member-role">PPT制作</p>
+              <p class="member-desc">
+                协助PPT内容优化与细节打磨，专注于案例与机制的图形化表达，提升信息传达效率。
+              </p>
+            </div>
+          </div>
+
+          <!-- 成员4 -->
+          <div class="member-card">
+            <img
+              src="https://img.freepik.com/free-photo/person-avatar_23-2148816613.jpg"
+              alt="林岚虹"
+              class="member-img"
+            />
+            <div class="member-info">
+              <h3 class="member-name">林岚虹</h3>
+              <p class="member-role">PPT制作</p>
+              <p class="member-desc">
+                参与PPT版式设计与色彩方案制定，确保视觉风格统一且符合主题调性，增强内容吸引力。
+              </p>
+            </div>
+          </div>
+
+          <!-- 成员5 -->
+          <div class="member-card">
+            <img
+              src="https://img.freepik.com/free-photo/person-avatar_23-2148816614.jpg"
+              alt="顾彩薇"
+              class="member-img"
+            />
+            <div class="member-info">
+              <h3 class="member-name">顾彩薇</h3>
+              <p class="member-role">配图和视频</p>
+              <p class="member-desc">
+                负责网站与PPT的图片筛选、视频素材制作，确保视觉内容与主题高度契合，增强感染力。
+              </p>
+            </div>
+          </div>
+
+          <!-- 成员6 -->
+          <div class="member-card">
+            <img
+              src="https://img.freepik.com/free-photo/person-avatar_23-2148816615.jpg"
+              alt="周孝桓"
+              class="member-img"
+            />
+            <div class="member-info">
+              <h3 class="member-name">周孝桓</h3>
+              <p class="member-role">网页制作</p>
+              <p class="member-desc">
+                负责将PPT内容转化为交互式网页，设计网站架构与用户体验，实现多页面联动与视觉呈现。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目背景区域 -->
+    <section class="project">
+      <div class="project-container">
+        <h2 class="project-title">项目背景</h2>
+        <div class="project-content">
+          <p>
+            安慰剂效应是一个充满魅力又常被误解的科学现象——它揭示了心理与生理之间的奇妙联系，却也因“虚假治疗”的表象被贴上“骗局”标签。我们团队在学习心理学与医学常识的过程中，发现大众对安慰剂效应的认知普遍存在偏差：有人将其神化为“万能心理疗法”，有人则完全否定其科学价值。
+          </p>
+          <br />
+          <p>
+            为此，我们希望通过制作这个主题网站，系统、客观地介绍安慰剂效应的科学原理、经典案例、生活应用及潜在风险，打破误解，让更多人了解：安慰剂效应不是“心理作用的谎言”，而是有明确生理基础的现象；它不能替代科学治疗，却能作为辅助工具，在教育、个人成长和临床中发挥积极作用。
+          </p>
+          <br />
+          <p>
+            我们的目标是：用通俗的语言解读复杂的科学，让“安慰剂效应”从神秘走向透明，帮助人们理性看待并合理运用这一心理现象，最终实现“了解自我、赋能生活”的价值。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式区域 -->
+    <section class="contact">
+      <div class="contact-container">
+        <h2 class="contact-title">联系我们</h2>
+        <div class="contact-methods">
+          <!-- 邮箱 -->
+          <div class="contact-method">
+            <div class="method-icon">✉️</div>
+            <h3 class="method-name">电子邮箱</h3>
+            <p class="method-info">placebo@example.com</p>
+          </div>
+
+          <!-- 微信公众号 -->
+          <div class="contact-method">
+            <div class="method-icon">📱</div>
+            <h3 class="method-name">微信公众号</h3>
+            <p class="method-info">安慰剂效应科普站</p>
+          </div>
+
+          <!-- 微博 -->
+          <div class="contact-method">
+            <div class="method-icon">🔍</div>
+            <h3 class="method-name">微博</h3>
+            <p class="method-info">@安慰剂效应探索者</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <div class="footer-copyright">© 2024 安慰剂效应主题网站 版权所有</div>
+      <div>
+        <a href="#" class="footer-link">隐私政策</a>
+        <a href="#" class="footer-link">友情链接</a>
+        <a href="about.html" class="footer-link">联系我们</a>
+      </div>
+    </footer>
+  </body>
+</html>
