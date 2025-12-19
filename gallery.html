@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>精彩剧照 - 让子弹飞</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      /* 确保图片在网格中等高且比例协调 */
+      .grid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border: 1px solid #333;
+        transition: transform 0.3s, border-color 0.3s;
+        cursor: pointer;
+      }
+      .grid img:hover {
+        transform: scale(1.05);
+        border-color: #b91c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="intro.html">影片简介</a>
+      <a href="characters.html">演职员表</a>
+      <a href="plot.html">剧情脉络</a>
+      <a href="gallery.html" class="active">精彩剧照</a>
+      <a href="quotes.html">经典台词</a>
+      <a href="behind.html">经典音乐</a>
+      <a href="reviews.html">影评鉴赏</a>
+      <a href="awards.html">荣誉奖项</a>
+      <a href="message.html">观众留言</a>
+    </nav>
+    <div class="container">
+      <h2>剧照展示</h2>
+      <div class="title-line"></div>
+      <div class="grid">
+        <img src="images/gallery (1).jpg" alt="剧照1" class="content-img" />
+        <img src="images/gallery (2).jpg" alt="剧照2" class="content-img" />
+        <img src="images/gallery (3).jpg" alt="剧照3" class="content-img" />
+        <img src="images/gallery (4).jpg" alt="剧照4" class="content-img" />
+        <img src="images/gallery (5).jpg" alt="剧照5" class="content-img" />
+        <img src="images/gallery (6).jpg" alt="剧照6" class="content-img" />
+        <img src="images/gallery (7).jpg" alt="剧照7" class="content-img" />
+        <img src="images/gallery (8).jpg" alt="剧照8" class="content-img" />
+        <img src="images/gallery (9).jpg" alt="剧照9" class="content-img" />
+      </div>
+    </div>
+    <footer>
+      <div class="personal-info">
+        班级：2024物联网师 &nbsp;|&nbsp; 学号：2024035944026 &nbsp;|&nbsp;
+        姓名：周孝桓
+      </div>
+    </footer>
+  </body>
+</html>

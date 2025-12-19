@@ -2,241 +2,91 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>神奇的“假治疗”——安慰剂效应</title>
+    <title>让子弹飞 - 首页</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Microsoft YaHei", sans-serif;
-      }
-
-      /* 导航栏样式 */
-      .nav {
-        background-color: #2c3e50;
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-
-      .nav-container {
-        width: 1200px;
-        margin: 0 auto;
+      .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+          url("images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         display: flex;
-        justify-content: space-between;
-      }
-
-      .nav-logo {
-        color: white;
-        font-size: 22px;
-        font-weight: bold;
-      }
-
-      .nav-list {
-        display: flex;
-        list-style: none;
-      }
-
-      .nav-item {
-        margin-left: 30px;
-      }
-
-      .nav-link {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        transition: color 0.3s;
-      }
-
-      .nav-link:hover {
-        color: #3498db;
-      }
-
-      /* Banner 样式 */
-      .banner {
-        height: 500px;
-        background: url("./ppt_images/placebo_pill_effect.jpg") center/cover
-          no-repeat;
-        display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        text-align: center;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        background-blend-mode: overlay;
-      }
-
-      .banner-content {
-        max-width: 800px;
-        padding: 0 20px;
-      }
-
-      .banner-title {
-        font-size: 42px;
-        margin-bottom: 20px;
-      }
-
-      .banner-subtitle {
-        font-size: 20px;
-        margin-bottom: 30px;
-        line-height: 1.5;
-      }
-
-      .banner-btn {
-        padding: 12px 30px;
-        margin: 0 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #3498db;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .banner-btn:hover {
-        background-color: #2980b9;
-      }
-
-      /* 简介区域样式 */
-      .intro {
-        padding: 80px 0;
-        background-color: #f9f9f9;
-      }
-
-      .intro-container {
-        width: 1200px;
-        margin: 0 auto;
-        display: flex;
         align-items: center;
-        gap: 50px;
-      }
-
-      .intro-img {
-        width: 500px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-
-      .intro-text {
-        flex: 1;
-      }
-
-      .intro-title {
-        font-size: 28px;
-        color: #2c3e50;
-        margin-bottom: 20px;
-      }
-
-      .intro-desc {
-        font-size: 18px;
-        color: #555;
-        line-height: 1.8;
-      }
-
-      /* 底部样式 */
-      .footer {
-        background-color: #2c3e50;
-        color: white;
-        padding: 40px 0;
         text-align: center;
       }
-
-      .footer-copyright {
-        margin-bottom: 15px;
-        font-size: 14px;
+      .hero h1 {
+        font-size: 120px;
+        margin: 0;
+        color: #b91c1c;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+        font-family: "Ma Shan Zheng", "STKaiti", serif;
       }
-
-      .footer-link {
-        color: #3498db;
-        text-decoration: none;
-        margin: 0 10px;
-        font-size: 14px;
+      .hero p {
+        font-size: 24px;
+        letter-spacing: 15px;
+        color: #ccc;
+        margin-top: 20px;
       }
     </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "recharts": "https://esm.sh/recharts@^3.6.0"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
   </head>
-
   <body>
-    <!-- 导航栏 -->
-    <nav class="nav">
-      <div class="nav-container">
-        <div class="nav-logo">安慰剂效应</div>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">首页</a>
-          </li>
-          <li class="nav-item">
-            <a href="overview.html" class="nav-link">效应概述</a>
-          </li>
-          <li class="nav-item">
-            <a href="mechanism.html" class="nav-link">作用机制</a>
-          </li>
-          <li class="nav-item">
-            <a href="cases.html" class="nav-link">经典案例</a>
-          </li>
-          <li class="nav-item">
-            <a href="life.html" class="nav-link">生活应用</a>
-          </li>
-          <li class="nav-item">
-            <a href="empowerment.html" class="nav-link">双向赋能</a>
-          </li>
-          <li class="nav-item">
-            <a href="risk.html" class="nav-link">争议风险</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">关于我们</a>
-          </li>
-        </ul>
-      </div>
+    <nav>
+      <a href="index.html" class="active">首页</a>
+      <a href="intro.html">影片简介</a>
+      <a href="characters.html">演职员表</a>
+      <a href="plot.html">剧情脉络</a>
+      <a href="gallery.html">精彩剧照</a>
+      <a href="quotes.html">经典台词</a>
+      <a href="behind.html">经典音乐</a>
+      <a href="reviews.html">影评鉴赏</a>
+      <a href="awards.html">荣誉奖项</a>
+      <a href="message.html">观众留言</a>
     </nav>
 
-    <!-- Banner 区域 -->
-    <section class="banner">
-      <div class="banner-content">
-        <h1 class="banner-title">神奇的“假治疗”——揭秘安慰剂效应</h1>
-        <p class="banner-subtitle">
-          探索信念如何触发身体的治愈力量，了解生活中无处不在的安慰剂效应
-        </p>
-        <button
-          class="banner-btn"
-          onclick="window.location.href='overview.html'"
-        >
-          立即探索
-        </button>
-        <button class="banner-btn" onclick="window.location.href='cases.html'">
-          查看案例
-        </button>
-      </div>
-    </section>
+    <div class="marquee-box">
+      <marquee scrollamount="10"
+        >重要公告：鹅城县长马邦德到任！公平，公平，还是他妈的公平！</marquee
+      >
+    </div>
 
-    <!-- 简介区域 -->
-    <section class="intro">
-      <div class="intro-container">
-        <img
-          src="./ppt_images/placebo_pill_effect.jpg"
-          alt="安慰剂示例"
-          class="intro-img"
-        />
-        <div class="intro-text">
-          <h2 class="intro-title">什么是安慰剂效应？</h2>
-          <p class="intro-desc">
-            你知道吗？一颗不含任何药效的淀粉药片，却能缓解慢性头痛；一次没有实际操作的“手术”，竟能减轻心绞痛患者的痛苦。这就是神奇的安慰剂效应——它不是骗局，而是“相信”的心理预期，触发身体产生真实的治愈反应。从医学临床到日常生活，安慰剂效应无处不在，它让我们重新认识“身心协同”的强大力量。
-          </p>
-        </div>
-      </div>
-    </section>
+    <div class="hero">
+      <h1>让子弹飞</h1>
+      <p style="letter-spacing: 10px; color: #ccc">LET THE BULLETS FLY</p>
+    </div>
 
-    <!-- 底部 -->
-    <footer class="footer">
-      <div class="footer-copyright">© 2025 Va1otus 版权所有</div>
-      <div>
-        <a href="#" class="footer-link">隐私政策</a>
-        <a href="#" class="footer-link">友情链接</a>
-        <a href="about.html" class="footer-link">联系我们</a>
+    <div class="container">
+      <h2 style="color: #ef4444">姜文导演作品</h2>
+      <div class="title-line"></div>
+      <p style="text-align: center; line-height: 2">
+        《让子弹飞》是由姜文执导，姜文、周润发、葛优、刘嘉玲、陈坤、周韵、廖凡、姜武等主演的动作喜剧片。<br />
+        该片讲述了悍匪张牧之摇身一变冒充清官马邦德上任鹅城县长，并与镇守鹅城的恶霸黄四郎展开一场激烈争斗的故事。
+      </p>
+    </div>
+
+    <footer>
+      <div class="personal-info">
+        班级：2024物联网师 &nbsp;|&nbsp; 学号：2024035944026 &nbsp;|&nbsp;
+        姓名：周孝桓
       </div>
+      <p style="color: #444; font-size: 12px; margin-top: 10px">
+        © 2025 网页设计课设 index.html
+      </p>
     </footer>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

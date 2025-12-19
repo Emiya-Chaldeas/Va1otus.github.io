@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>观众留言 - 让子弹飞</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function checkForm() {
+        var name = document.getElementById("name").value;
+        var content = document.getElementById("content").value;
+        if (name == "" || content == "") {
+          alert("请填写完整留言信息！");
+          return false;
+        }
+        alert("留言子弹已发射成功！");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="intro.html">影片简介</a>
+      <a href="characters.html">演职员表</a>
+      <a href="plot.html">剧情脉络</a>
+      <a href="gallery.html">精彩剧照</a>
+      <a href="quotes.html">经典台词</a>
+      <a href="behind.html">经典音乐</a>
+      <a href="reviews.html">影评鉴赏</a>
+      <a href="awards.html">荣誉奖项</a>
+      <a href="message.html" class="active">观众留言</a>
+    </nav>
+    <div class="container">
+      <h2>观众留言板</h2>
+      <div class="title-line"></div>
+      <form
+        onsubmit="return checkForm()"
+        style="background: #111; padding: 20px; border-radius: 10px"
+      >
+        <p>
+          昵称：<br /><input
+            type="text"
+            id="name"
+            style="
+              width: 100%;
+              padding: 10px;
+              margin-top: 5px;
+              background: #222;
+              border: 1px solid #444;
+              color: white;
+            "
+          />
+        </p>
+        <p>
+          留言内容：<br /><textarea
+            id="content"
+            style="
+              width: 100%;
+              height: 100px;
+              padding: 10px;
+              margin-top: 5px;
+              background: #222;
+              border: 1px solid #444;
+              color: white;
+            "
+          ></textarea>
+        </p>
+        <p>
+          <input
+            type="submit"
+            value="提交留言"
+            style="
+              padding: 10px 30px;
+              background: #b91c1c;
+              color: white;
+              border: none;
+              cursor: pointer;
+            "
+          />
+        </p>
+      </form>
+    </div>
+    <footer>
+      <div class="personal-info">
+        班级：2024物联网师 &nbsp;|&nbsp; 学号：2024035944026 &nbsp;|&nbsp;
+        姓名：周孝桓
+      </div>
+    </footer>
+  </body>
+</html>
